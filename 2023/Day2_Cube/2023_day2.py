@@ -10,7 +10,6 @@ class Bag:#this is only a class because I thought round 2 was going to be way mo
     red, blue, green = 0, 0, 0
 f = open("input.txt", "r")
 for line in f:#read the file
-    #part 1
     rounds=((line.strip()).split(':'))[1].split(';')#get a list of each bag pull
     roundEliminated = False
     maxBag = Bag()#holds the highest numbers in each game
