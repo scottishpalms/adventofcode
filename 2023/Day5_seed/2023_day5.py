@@ -33,13 +33,13 @@ def computeStep(start, length, data, location):
     for locale in location:
         if(((startAnswer in range(locale[0], locale[0]+locale[2]+1)) and (endAnswer in range(locale[0], locale[0]+locale[2]+1)))):
             inSameGroup = True
-            #print("Moving on!")
+            print("Moving on!")
             break
     if inSameGroup == False:
         lowHalf = computeStep(start, int(length/2), data, location)
         highHalf = computeStep(int(start+length/2), int(length/2), data, location)
         answer2 = min(lowHalf, highHalf, answer2)
-    #print("Start:", start, "length", length, [startAnswer, endAnswer])
+    print("Start:", start, "length", length, [startAnswer, endAnswer])
     
     return answer2
 
@@ -54,7 +54,7 @@ light = []
 temperature = []
 humidity = []
 
-with open('input.txt', 'r') as file:
+with open('1input.txt', 'r') as file:
     lines = file.readlines()
 
 # Extract seeds data
