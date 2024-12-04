@@ -1,7 +1,6 @@
 ### General setup: ###
 USE_TEST_INPUT = 0
 DAY_NAME = "Day2"
-import bisect 
 answer1, answer2, i, j, multipliers = 0,0,0,0, 0
 if(USE_TEST_INPUT):
     f = open(DAY_NAME + "/test_input.txt", "r").readlines()
