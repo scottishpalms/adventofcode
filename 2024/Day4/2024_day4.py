@@ -11,7 +11,6 @@ else:
 #part1: find all cases of "XMAS", horizontal, vertical, and diagonal (forwards and backwards)
 firstTime = True
 horizontal, vertical, diagL, diagR = [], [], [''], ['']
-horizontalString = ""
 width = 0
 startingIndex = 0
 #extract horizontal, vertical both diagonal strings:
@@ -24,7 +23,6 @@ for lineNumber, line in enumerate(f):
         diagR.append('')
         diagL.append('')
     j = 0
-    k = 0
     for i, letter in enumerate(line.strip()):
         if(firstTime):
             vertical.append('')
