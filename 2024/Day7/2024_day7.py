@@ -34,9 +34,9 @@ for lineNumber, line in enumerate(f):
         total = equation[0]
         for j in range(1, len(equation)):
             operation = (i // (3**(j-1))) % 3  #base 3ish way of doing what was done in binary for part 1
-            if operation == 0:  
+            if (operation == 0):  
                 total += equation[j]
-            elif (operation ==1):
+            elif (operation == 1):
                 total = int(str(total)+str(equation[j]))                
             else:
                 total *= equation[j]
