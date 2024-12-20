@@ -36,9 +36,6 @@ def explorePath(grid, startingRow, startingCol, startingDirection):
      return totalPaths
           
 
-
-
-
 def checkRadius(grid, startingRow, startingCol, originDir, desiredLevel):
     validDirections = []
     for directionIndex in range(0, len(dir)):
