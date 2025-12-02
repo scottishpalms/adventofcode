@@ -40,24 +40,16 @@ for lineNumber, line in enumerate(f):
     if(dir == "R"):
         pos += turns
         if(pos//DIAL_SIZE > 0):
-            #print("added at least one on a right turn")
-            answer2+= pos//DIAL_SIZE
+            answer2+= pos//DIAL_SIZE 
     else:
-        if(turns >= pos and pos != 0):
-            answer2+= 1 + max(0, (turns//DIAL_SIZE)-1)
-
-            if(pos == 0):
-               answer2 -= 1 #0s get double counted otherwise
-            #print("added at least one on a left turn")
+        dist_to_zero = pos if pos > 0 else DIAL_SIZE     
+        if turns >= dist_to_zero:
+            answer2 += 1 + (turns - dist_to_zero) // DIAL_SIZE
         adjTurns =  turns % DIAL_SIZE
         pos += (DIAL_SIZE - adjTurns)
-    
 
-    #print("Position=", pos%DIAL_SIZE, pos, answer2)
 
     pos %= DIAL_SIZE
-    
-    #print("Position  = ", pos)
     if(pos == 0):
         answer1 +=1
         
@@ -65,5 +57,5 @@ for lineNumber, line in enumerate(f):
 
 
 print("Part 1 Answer: ", answer1)
-#print("Part 2 Answer: ", answer2)#broken
-print("Lazy part 2 answer", lazy)
+print("Part 2 Answer: ", answer2)
+print("Lazy part 2 answer", lazy)#works, keeping this in for posterity
